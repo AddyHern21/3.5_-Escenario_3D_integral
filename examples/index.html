@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Proyecto 3D Boxeo - ITP</title>
+    <link rel="icon" href="models/textures/icono.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<div id="menuOverlay">
+    <header class="menuHeader">
+        <img src="models/textures/logo_itp.png" alt="Logo ITP" class="mainLogo">
+        <h1>SIMULACIÓN DE BOXEO 3D: PRÁCTICA INTEGRADORA</h1>
+    </header>
+
+    <div class="mainMenuContent">
+        <section class="selectionSection">
+            <div class="selectorContainer">
+                <div class="fighterCard">
+                    <h3>JUGADOR</h3>
+                    <div class="viewer" id="playerViewer">
+                        <img src="models/textures/avatar_jugador.png" alt="Jugador" style="width: 90%; height: 90%; object-fit: contain; border-radius: 4px;">
+                    </div>
+                    <div class="controls">
+                        <button id="playerPrev">◀</button>
+                        <button id="playerNext">▶</button>
+                    </div>
+                </div>
+
+                <div class="fighterCard">
+                    <h3>OPONENTE (IA)</h3>
+                    <div class="viewer" id="enemyViewer">
+                        <img src="models/textures/avatar_enemigo.png" alt="Oponente" style="width: 90%; height: 90%; object-fit: contain; border-radius: 4px;">
+                    </div>
+                    <div class="controls">
+                        <button id="enemyPrev">◀</button>
+                        <button id="enemyNext">▶</button>
+                    </div>
+                </div>
+            </div>
+            <button id="fightBtn" disabled>CARGANDO RECURSOS...</button>
+        </section>
+
+        <section class="instructionsBoard">
+            <h2>CONTROLES DE COMBATE</h2>
+            <div class="instructionGrid">
+                
+                <div class="instGroup">
+                    <div class="instItem"><img src="models/textures/controles/flecha_arriba.png"><span>Caminar Adelante</span></div>
+                    <div class="instItem"><img src="models/textures/controles/flecha_abajo.png"><span>Caminar Atrás</span></div>
+                    <div class="instItem"><img src="models/textures/controles/flecha_izquierda.png"><span>Paso Izquierda</span></div>
+                    <div class="instItem"><img src="models/textures/controles/flecha_derecha.png"><span>Paso Derecha</span></div>
+                    <div class="instItem">
+                        <div class="comboKeys"><img src="models/textures/controles/shift.png"> + <span>Flechas</span></div>
+                        <span>Pasos Largos</span>
+                    </div>
+                    <div class="instItem"><img src="models/textures/controles/1.png"><span>Cámara Combate</span></div>
+                    <div class="instItem"><img src="models/textures/controles/2.png"><span>Cámara Libre</span></div>
+                </div>
+
+                <div class="instGroup">
+                    <div class="instItem"><img src="models/textures/controles/a.png"><span>Lead Jab</span></div>
+                    <div class="instItem"><img src="models/textures/controles/w.png"><span>Jab / Cross</span></div>
+                    <div class="instItem"><img src="models/textures/controles/s.png"><span>Hook</span></div>
+                    <div class="instItem"><img src="models/textures/controles/d.png"><span>Body Jab</span></div>
+                    <div class="instItem">
+                        <div class="comboKeys"><img src="models/textures/controles/shift.png"> + <img src="models/textures/controles/a.png"></div>
+                        <span>Lead Jab Shift</span>
+                    </div>
+                    <div class="instItem">
+                        <div class="comboKeys"><img src="models/textures/controles/shift.png"> + <img src="models/textures/controles/w.png"></div>
+                        <span>Uppercut</span>
+                    </div>
+                    <div class="instItem">
+                        <div class="comboKeys"><img src="models/textures/controles/shift.png"> + <img src="models/textures/controles/s.png"></div>
+                        <span>Hook Shift</span>
+                    </div>
+                    <div class="instItem">
+                        <div class="comboKeys"><img src="models/textures/controles/shift.png"> + <img src="models/textures/controles/d.png"></div>
+                        <span>Body Jab Shift</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="menuFooter">
+        <div class="teamGrid">
+            <div class="student"><span>Hernandez Ortiz Addi</span> <br> 23200847</div>
+            <div class="student"><span>Huerta Aguilar José Antonio</span> <br> 23200848</div>
+            <div class="student"><span>Quezada Quiterio Marcelo</span> <br> 23200881</div>
+            <div class="student"><span>Sanchez Ortega Adrian</span> <br> 23200899</div>
+        </div>
+    </footer>
+</div>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "../build/three.module.js",
+        "three/addons/": "./jsm/"
+    }
+}
+</script>
+<script type="module" src="main.js"></script>
+
+</body>
+</html>

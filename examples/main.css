@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(10,10,30,0.95));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+/* Header */
+.menuHeader {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mainLogo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffd700; /* Dorado para resaltar */
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Contenido Principal */
+.mainMenuContent {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    flex-grow: 1;
+}
+
+/* Selección */
+.selectionSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectorContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.fighterCard h3 {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+}
+
+.viewer {
+    width: 220px;
+    height: 280px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+/* Botones */
+button {
+    background: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+#fightBtn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    background: #ad0202; /* Rojo pelea */
+    color: white;
+}
+
+#fightBtn:disabled {
+    background: #444;
+    cursor: not-allowed;
+}
+
+/* Instrucciones (Actualizado a 2 columnas) */
+.instructionsBoard {
+    background: rgba(255,255,255,0.05);
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 600px; /* Lo hicimos más ancho para acomodar todo */
+}
+
+.instructionsBoard h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #ffd700;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.instructionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el contenedor en dos columnas iguales */
+    gap: 30px; /* Espacio entre columnas */
+    margin-top: 20px;
+}
+
+.instGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado vertical entre cada tecla */
+}
+
+.instItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.instItem img {
+    width: 32px; 
+    height: 32px;
+    object-fit: contain; /* Evita que las imágenes se deformen */
+}
+
+.comboKeys {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Footer integrantes */
+.menuFooter {
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 10px;
+}
+
+.student {
+    font-size: 12px;
+    color: #888;
+}
+
+.student span {
+    font-weight: bold;
+    color: #eee;
+    font-size: 13px;
+}
